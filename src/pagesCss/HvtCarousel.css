@@ -3,10 +3,9 @@
   }
   
   .new-sec {
-    margin-bottom: 30px;
     position: relative;
     overflow: hidden; /* Hide overflow to prevent scrolling */
-    height: calc(100vh - var(--navbar-height)); /* Full height minus navbar */
+    height: calc(75vh - var(--navbar-height)); /* Full height minus navbar */
   }
   
   .slide {
