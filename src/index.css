@@ -12,3 +12,23 @@ code {
     monospace;
 }
 
+.main-hover:hover {
+  background-position: 0;
+
+}
+.main-hover:hover::before {
+  width: 100%;
+}
+.main-hover {
+  background-image: linear-gradient(
+    to right,
+    #114A1F, 
+    #33bb55 50%,
+    hsl(29, 100%, 50%) 50% 
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}

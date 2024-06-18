@@ -23,3 +23,11 @@
     font-size: 1.2rem;
     font-weight: bold;
   }
+  .explore-btn{
+    background-color: #917d43 !important;
+    border:none !important
+  }
+  .explore-btn:hover{
+    background-color: #114A1F!important;
+    border:none !important
+  }
