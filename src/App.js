@@ -1,7 +1,8 @@
-import './App.css';
+import Hvttourcard from "./pages/Hvttourcard";
 
 function App() {
   return (<>
+<Hvttourcard/>
   </>
   )
 }
