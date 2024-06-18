@@ -1,0 +1,57 @@
+.card.testimonial-card {
+  margin-top: 20px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 90%;
+  max-width: 250px;
+}
+
+.card-up {
+  height: 100px;
+  background-color: #8E7E50;
+}
+
+.avatar {
+  margin-top: -40px;
+}
+
+.avatar img {
+  border: 5px solid white;
+}
+
+.card-body {
+  text-align: center;
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-body p {
+  font-size: 0.9em;
+  color: #707070;
+  margin-bottom: 15px;
+}
+
+.rating {
+  font-size: 1em;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #8E7E50;
+  border-radius: 50%;
+}
+
+.carousel-indicators li {
+  background-color: #8E7E50;
+}
+
+.carousel-indicators .active {
+  background-color: #4A3C29;
+}
