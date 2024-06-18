@@ -20,21 +20,10 @@ export const HvtHeader = () => {
                 </li>
                 <li className="nav-item">
                   <a className="nav-link " href="#">About</a>
+                </li><li className="nav-item">
+                  <a className="nav-link" href="#">Destinations</a>
                 </li>
-                <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Destinations
-                  </a>
-                  <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a className="dropdown-item" href="#">Vrindavan</a></li>
-                    <li><a className="dropdown-item" href="#">Mathura</a></li>
-                    <li><a className="dropdown-item" href="#">Nandgaon</a></li>
-                    <li><a className="dropdown-item" href="#">Barsana</a></li>
-                    <li><a className="dropdown-item" href="#">Dauji</a></li>
-                    <li><a className="dropdown-item" href="#">Goverdhan</a></li>
-                    <li><a className="dropdown-item" href="#">Gokul</a></li>
-                  </ul>
-                </li>
+                
                 <li className="nav-item">
                   <a className="nav-link" href="#">Contact Us</a>
                 </li>
