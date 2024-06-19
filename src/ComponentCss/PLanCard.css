@@ -1,0 +1,14 @@
+.container {
+    padding-top: 20px;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  h3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
