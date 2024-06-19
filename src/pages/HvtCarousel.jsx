@@ -22,7 +22,7 @@ const HvtCarousel = () => {
   }, [images.length]);
 
   return (
-    <main className="new-sec">
+    <main className="new-sec bg-dark">
       <ul className="slide">
         {images.map((image, index) => (
           <li key={index} className={`item ${index === currentIndex ? 'slide-animation' : ''}`}>

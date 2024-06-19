@@ -1,6 +1,5 @@
 header {
-    padding: 5px 20px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid black;
   }
   
   .navbar-brand {
@@ -11,7 +10,7 @@ header {
   .navbar-brand h1 {
     font-size: 26px;
     font-weight: bold;
-    white-space: nowrap; /* Prevent text from wrapping */
+    white-space: nowrap;
   }
   
   .navbar-nav .nav-link {
