@@ -47,7 +47,7 @@ return(
       </Row>
       <Row className="justify-content-center mt-5">
         <Col md={10}>
-          <Carousel indicators={false} controls={true} interval={2000}>
+          <Carousel indicators={false} controls={true} interval={1000}>
             {testimonials.map((testimonial, index) => (
               <Carousel.Item key={index}>
                 <Card className="h-100">
