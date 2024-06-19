@@ -1,11 +1,12 @@
 import React from 'react';
-import { Card, Button,  } from 'react-bootstrap';
-import "../ComponentCss/Hvttourcard.css";
-import tours from '../Data/data';
+import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import '../ComponentCss/Hvttourcard.css';
+import tours from "../Data/data.js";
 
 const Hvttourcard = () => {
   return (
-    <section className="bg-light  mt-4  p-5">
+    <section className="bg-light mt-4 p-5">
       <div className="container">
         <div className="row">
           <div className="col-12 text-center mb-4">
@@ -22,7 +23,11 @@ const Hvttourcard = () => {
                 <Card.Img variant="top" src={tour.imgSrc} className="card-img-top" />
                 <Card.Body className="card-body d-flex flex-column">
                   <Card.Title className="card-title text-center">{tour.title}</Card.Title>
-                  <Button variant="primary" className="mt-auto explore-btn " >EXPLORE</Button>
+                  <div className="d-flex justify-content-center mt-auto">
+                    <Link to={`/tour/${tour.id}`}>
+                      <Button variant="primary" className="explore-btn">EXPLORE</Button>
+                    </Link>
+                  </div>
                 </Card.Body>
               </Card>
             </div>
