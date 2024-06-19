@@ -5,8 +5,8 @@ import HvtFooter from './pages/HvtFooter';
 import { HvtHeader } from './pages/HvtHeader';
 import HvtReview from './pages/HvtReview';
 import HvtWwr from './pages/HvtWwr';
-import Hvttourcard from './pages/Hvttourcard';
 import HvtPayment from './pages/Hvtpayment';
+import Hvttourcard from './pages/Hvttourcard';
 
 function App() {
   return (

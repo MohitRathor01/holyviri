@@ -22,7 +22,7 @@ const Hvttourcard = () => {
                 <Card.Img variant="top" src={tour.imgSrc} className="card-img-top" />
                 <Card.Body className="card-body d-flex flex-column">
                   <Card.Title className="card-title text-center">{tour.title}</Card.Title>
-                  <Button variant="primary" className="mt-auto explore-btn">EXPLORE</Button>
+                  <Button variant="primary" className="mt-auto explore-btn " >EXPLORE</Button>
                 </Card.Body>
               </Card>
             </div>
