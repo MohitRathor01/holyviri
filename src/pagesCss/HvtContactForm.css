@@ -259,6 +259,10 @@ textarea.input {
   height: 400px;
   transform: translate(-300%, 70%);
 }
+textarea::placeholder {
+  color: #fff;
+  opacity: 1; 
+}
 
 @media (max-width: 850px) {
   .form {

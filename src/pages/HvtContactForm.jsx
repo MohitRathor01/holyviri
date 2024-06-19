@@ -1,9 +1,26 @@
-import React from 'react'
-import '../pagesCss/HvtContactForm.css'
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import React, { useState } from 'react';
+import '../pagesCss/HvtContactForm.css';
+import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter as FaXTwitter } from "react-icons/fa";
 
 const HvtContactForm = () => {
+  const [focus, setFocus] = useState({
+    name: false,
+    email: false,
+    phone: false,
+    message: false,
+  });
+
+  const handleFocus = (e) => {
+    setFocus({ ...focus, [e.target.name]: true });
+  };
+
+  const handleBlur = (e) => {
+    if (!e.target.value) {
+      setFocus({ ...focus, [e.target.name]: false });
+    }
+  };
+
   return (
     <div className="new-container">
       <span className="big-circle"></span>
@@ -34,9 +51,6 @@ const HvtContactForm = () => {
           <div className="social-media">
             <p>Connect with us :</p>
             <div className="social-icons">
-              {/* <a href="https://www.facebook.com/profile.php?id=61560455426347" target="_blank" rel="noopener noreferrer">
-                <FaFacebookF />
-              </a> */}
               <a href="https://x.com/HolyTour42005?t=na70tSgwk3iQGGnXi4uNfA&s=09" target="_blank" rel="noopener noreferrer">
                 <FaXTwitter />
               </a>
@@ -46,9 +60,7 @@ const HvtContactForm = () => {
               <a href="#">
                 <FaLinkedinIn />
               </a>
-              <a href="#">
-                <FaLinkedinIn />
-              </a>
+              
               <a href="" target="_blank" rel="noopener noreferrer">
                 <img src="/assets/Zwolf.jpeg" className="zwolf" alt="Zwolf" />
               </a>
@@ -62,32 +74,56 @@ const HvtContactForm = () => {
 
           <form action="index.html" autoComplete="off">
             <h3 className="title">Contact us</h3>
-            <div className="input-container">
-              <input type="text" name="name" className="input" />
-              <label htmlFor="">Name</label>
+            <div className={`input-container ${focus.name ? 'focus' : ''}`}>
+              <input
+                type="text"
+                name="name"
+                className="input"
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+              />
+              <label>Name</label>
               <span>Name</span>
             </div>
-            <div className="input-container">
-              <input type="email" name="email" className="input" />
-              <label htmlFor="">Email</label>
+            <div className={`input-container ${focus.email ? 'focus' : ''}`}>
+              <input
+                type="email"
+                name="email"
+                className="input"
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+              />
+              <label>Email</label>
               <span>Email</span>
             </div>
-            <div className="input-container">
-              <input type="tel" name="phone" className="input" />
-              <label htmlFor="">Phone</label>
+            <div className={`input-container ${focus.phone ? 'focus' : ''}`}>
+              <input
+                type="tel"
+                name="phone"
+                className="input"
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+              />
+              <label>Phone</label>
               <span>Phone</span>
             </div>
-            <div className="input-container textarea">
-              <textarea name="message" className="input"></textarea>
-              <label htmlFor="">Message (Optional)</label>
+            <div className={`input-container textarea ${focus.message ? 'focus' : ''}`}>
+              <textarea
+                name="message"
+                className="input"
+                placeholder="Message (Optional)"
+                
+                // onFocus={handleFocus}
+                onBlur={handleBlur}
+              ></textarea>
               <span>Message</span>
             </div>
-            <input type="submit" value="Send" className="btn" />
+            <button type="button" className="btn">Send</button>
           </form>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default HvtContactForm
+export default HvtContactForm;
