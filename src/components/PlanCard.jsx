@@ -27,7 +27,7 @@ const PlanCard = ({ plan }) => {
             </Card.Body>
               <Button variant="primary" onClick={handleShowDetails}>View Details</Button>
 
-              <Button variant="success" onClick={handleShowBookNow}>Book Now</Button>
+              <Button variant="success" className="ms-4" onClick={handleShowBookNow}>Book Now</Button>
           </Col>
         </Row>
       </Card>
