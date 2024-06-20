@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Card, Button, Modal, Row, Col, Form } from 'react-bootstrap';
-import '../ComponentCss/PLanCard.css';
+import React, { useState } from "react";
+import { Card, Button, Modal, Row, Col, Form } from "react-bootstrap";
+import "../ComponentCss/PLanCard.css";
 
 const PlanCard = ({ plan }) => {
   const [showBookNow, setShowBookNow] = useState(false);
@@ -21,7 +21,6 @@ const PlanCard = ({ plan }) => {
     { day: "Day 05", location: "Govardhan", description: "Description" },
     { day: "Day 06", location: "Dauji", description: "Description" },
     { day: "Day 07", location: "Gokul", description: "Description" },
-
   ];
 
   return (
@@ -36,8 +35,16 @@ const PlanCard = ({ plan }) => {
               <Card.Title>{plan.title}</Card.Title>
               <Card.Text>{plan.description}</Card.Text>
             </Card.Body>
-            <Button variant="primary" onClick={handleShowDetails}>View Details</Button>
-            <Button variant="success" className="ms-4" onClick={handleShowBookNow}>Book Now</Button>
+            <Button variant="primary" onClick={handleShowDetails}>
+              View Details
+            </Button>
+            <Button
+              variant="success"
+              className="ms-4"
+              onClick={handleShowBookNow}
+            >
+              Book Now
+            </Button>
           </Col>
         </Row>
       </Card>
@@ -49,12 +56,19 @@ const PlanCard = ({ plan }) => {
         <Modal.Body>
           <Row>
             <Col>
-              <img src="/images/des9.jpeg" alt="Plan" style={{ width: '100%' }} />
+              <img
+                src="/images/des9.jpeg"
+                alt="Plan"
+                style={{ width: "100%" }}
+              />
             </Col>
             <Col>
               <h4>{plan.title}</h4>
               <p>{plan.description}</p>
-              <p><strong>Price: </strong>{plan.price}</p>
+              <p>
+                <strong>Price: </strong>
+                {plan.price}
+              </p>
             </Col>
           </Row>
           <hr />
@@ -78,7 +92,9 @@ const PlanCard = ({ plan }) => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseDetails}>Close</Button>
+          <Button variant="secondary" onClick={handleCloseDetails}>
+            Close
+          </Button>
         </Modal.Footer>
       </Modal>
 
@@ -160,24 +176,30 @@ const PlanCard = ({ plan }) => {
 
             <Form.Group className="mb-3" controlId="formMessage">
               <Form.Label>Message</Form.Label>
-              <Form.Control as="textarea" rows={3} placeholder="Message(Optional)" />
+              <Form.Control
+                as="textarea"
+                rows={3}
+                placeholder="Message(Optional)"
+              />
             </Form.Group>
 
             <Form.Group controlId="formConsent">
-              <Form.Check 
-                type="checkbox" 
-                label="I authorize Swan Tours & its representatives to Call, SMS & Email me with reference to my Travel Enquiry. This consent will override any registration for DNC / NDNC." 
+              <Form.Check
+                type="checkbox"
+                label="I authorize Swan Tours & its representatives to Call, SMS & Email me with reference to my Travel Enquiry. This consent will override any registration for DNC / NDNC."
               />
             </Form.Group>
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseBookNow}>Close</Button>
+          <Button variant="secondary" onClick={handleCloseBookNow}>
+            Close
+          </Button>
           <Button variant="primary">Confirm Booking</Button>
         </Modal.Footer>
       </Modal>
     </div>
   );
-}
+};
 
 export default PlanCard;
