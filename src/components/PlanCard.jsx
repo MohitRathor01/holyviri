@@ -17,16 +17,15 @@ const PlanCard = ({ plan }) => {
     <div className="plan-card">
       <Card>
         <Row >
-          <Col md={4}>
+          <Col md={3}>
             <Card.Img variant="top" src="/images/des9.jpeg" alt="Plan image" />
           </Col>
-          <Col md={8}>
+          <Col md={9}>
             <Card.Body>
               <Card.Title>{plan.title}</Card.Title>
               <Card.Text>{plan.description}</Card.Text>
             </Card.Body>
               <Button variant="primary" onClick={handleShowDetails}>View Details</Button>
-
               <Button variant="success" className="ms-4" onClick={handleShowBookNow}>Book Now</Button>
           </Col>
         </Row>

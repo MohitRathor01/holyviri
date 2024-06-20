@@ -6,7 +6,6 @@ import PlanCard from './PlanCard';
 const TourDetails = () => {
   const { id } = useParams();
   const tour = tours.find(t => t.id === parseInt(id));
-
   return (
     <div className="container mt-5 text-center">
       {tour ? (
@@ -23,7 +22,7 @@ const TourDetails = () => {
           </div>
         </>
       ) : (
-        <p>Tour not found</p>
+        <p>Tour not found</p>  
       )}
     </div>
   );
