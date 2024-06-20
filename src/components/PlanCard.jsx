@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Button, Modal, Row, Col } from 'react-bootstrap';
+import { Card, Button, Modal, Row, Col, Form } from 'react-bootstrap';
 import '../ComponentCss/PLanCard.css';
 
 const PlanCard = ({ plan }) => {
@@ -11,12 +11,23 @@ const PlanCard = ({ plan }) => {
 
   const handleCloseDetails = () => setShowDetails(false);
   const handleShowDetails = () => setShowDetails(true);
-  console.log(plan)
+  console.log(plan);
+
+  const itinerary = [
+    { day: "Day 01", location: "Mathura", description: "Description" },
+    { day: "Day 02", location: "Vrindavan", description: "ADescription" },
+    { day: "Day 03", location: "Nandgaon", description: "Description" },
+    { day: "Day 04", location: "Barsana", description: "Description" },
+    { day: "Day 05", location: "Govardhan", description: "Description" },
+    { day: "Day 06", location: "Dauji", description: "Description" },
+    { day: "Day 07", location: "Gokul", description: "Description" },
+
+  ];
 
   return (
     <div className="plan-card">
       <Card>
-        <Row >
+        <Row>
           <Col md={4}>
             <Card.Img variant="top" src="/images/des9.jpeg" alt="Plan image" />
           </Col>
@@ -25,9 +36,8 @@ const PlanCard = ({ plan }) => {
               <Card.Title>{plan.title}</Card.Title>
               <Card.Text>{plan.description}</Card.Text>
             </Card.Body>
-              <Button variant="primary" onClick={handleShowDetails}>View Details</Button>
-
-              <Button variant="success" className="ms-4" onClick={handleShowBookNow}>Book Now</Button>
+            <Button variant="primary" onClick={handleShowDetails}>View Details</Button>
+            <Button variant="success" className="ms-4" onClick={handleShowBookNow}>Book Now</Button>
           </Col>
         </Row>
       </Card>
@@ -47,6 +57,25 @@ const PlanCard = ({ plan }) => {
               <p><strong>Price: </strong>{plan.price}</p>
             </Col>
           </Row>
+          <hr />
+          <h5>Recommended Itinerary</h5>
+          <div className="itinerary">
+            {itinerary.map((item, index) => (
+              <div key={index} className="itinerary-item mb-4">
+                <Row>
+                  <Col md={2} className="itinerary-day">
+                    <strong>{item.day}</strong>
+                    <div className="itinerary-point"></div>
+                  </Col>
+                  <Col md={10} className="itinerary-content">
+                    <h6>{item.location}</h6>
+                    <p>{item.description}</p>
+                  </Col>
+                </Row>
+              </div>
+            ))}
+            <div className="itinerary-line"></div>
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseDetails}>Close</Button>
@@ -58,7 +87,89 @@ const PlanCard = ({ plan }) => {
           <Modal.Title>Book Now</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>Booking details form goes here.</p>
+          <Form>
+            <Row className="mb-3">
+              <Form.Group as={Col} controlId="formTitle">
+                <Form.Label>Title</Form.Label>
+                <Form.Control as="select">
+                  <option>- Select -</option>
+                  <option>Mr.</option>
+                  <option>Mrs.</option>
+                  <option>Ms.</option>
+                </Form.Control>
+              </Form.Group>
+
+              <Form.Group as={Col} controlId="formName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter Name" />
+              </Form.Group>
+            </Row>
+
+            <Form.Group className="mb-3" controlId="formMobile">
+              <Form.Label>Mobile</Form.Label>
+              <Form.Control type="text" placeholder="Enter Mobile" />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="email" placeholder="Enter Email" />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formDateOfTour">
+              <Form.Label>Date of Tour</Form.Label>
+              <Form.Control type="date" />
+            </Form.Group>
+
+            <Row className="mb-3">
+              <Form.Group as={Col} controlId="formNoOfAdults">
+                <Form.Label>No of Adults</Form.Label>
+                <Form.Control as="select">
+                  <option>- Select -</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </Form.Control>
+              </Form.Group>
+
+              {/* <Form.Group as={Col} controlId="formChildren">
+                <Form.Label>Children</Form.Label>
+                <Form.Control as="select">
+                  <option>Children (5 - 12 Yrs)</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </Form.Control>
+              </Form.Group> */}
+            </Row>
+
+            <Form.Group className="mb-3" controlId="formCategoryOfHotels">
+              <Form.Label>Category of Hotels Needed</Form.Label>
+              <Form.Control as="select">
+                <option>- Select -</option>
+                <option>1 Star</option>
+                <option>2 Star</option>
+                <option>3 Star</option>
+                <option>4 Star</option>
+                <option>5 Star</option>
+              </Form.Control>
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formMessage">
+              <Form.Label>Message</Form.Label>
+              <Form.Control as="textarea" rows={3} placeholder="Message(Optional)" />
+            </Form.Group>
+
+            <Form.Group controlId="formConsent">
+              <Form.Check 
+                type="checkbox" 
+                label="I authorize Swan Tours & its representatives to Call, SMS & Email me with reference to my Travel Enquiry. This consent will override any registration for DNC / NDNC." 
+              />
+            </Form.Group>
+          </Form>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseBookNow}>Close</Button>
