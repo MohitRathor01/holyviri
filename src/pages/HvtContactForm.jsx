@@ -120,7 +120,7 @@ const HvtContactForm = () => {
               ></textarea>
               <span>Message</span>
             </div>
-            <button type="button" className="btn">Send</button>
+            <button type="button " className="btn btn-send">Send</button>
           </form>
         </div>
       </div>

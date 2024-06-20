@@ -262,8 +262,11 @@ textarea.input {
 textarea::placeholder {
   color: #fff;
   opacity: 1; 
+}.btn-send{
+  background-color: black !important;
+  padding: 5px 20px !important;
+color: whitesmoke !important;
 }
-
 @media (max-width: 850px) {
   .form {
     grid-template-columns: 1fr;
