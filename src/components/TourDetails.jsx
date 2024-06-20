@@ -8,11 +8,10 @@ const TourDetails = () => {
   const tour = tours.find(t => t.id === parseInt(id));
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 text-center">
       {tour ? (
         <>
           <h2>{tour.title}</h2>
-          <img src={tour.imgSrc} alt={tour.title} className="img-fluid mb-4" />
           <p>{tour.details}</p>
           <h3>Plans</h3>
           <div className="row">

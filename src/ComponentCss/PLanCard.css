@@ -1,14 +1,23 @@
-.container {
-    padding-top: 20px;
-  }
-  
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  h3 {
-    margin-top: 30px;
-    margin-bottom: 20px;
-  }
-  
+.plan-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-buttons {
+  margin-top: 20px;
+}
+
+.card-buttons .btn {
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card-buttons .btn:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
