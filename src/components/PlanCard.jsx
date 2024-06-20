@@ -11,47 +11,61 @@ const PlanCard = ({ plan }) => {
 
   const handleCloseDetails = () => setShowDetails(false);
   const handleShowDetails = () => setShowDetails(true);
+  console.log(plan)
 
   return (
-    <>
-      <Card className="mb-4 plan-card">
-        <Card.Body>
-          <Row>
-            <Col md={4}>
-              <Card.Img src={plan.images} alt={plan.title} className="plan-card-img" />
-            </Col>
-            <Col md={8}>
+    <div className="plan-card">
+      <Card>
+        <Row >
+          <Col md={4}>
+            <Card.Img variant="top" src="/images/des9.jpeg" alt="Plan image" />
+          </Col>
+          <Col md={8}>
+            <Card.Body>
               <Card.Title>{plan.title}</Card.Title>
-              <Card.Text>{plan.details}</Card.Text>
-              <div className="card-buttons">
-                <Button variant="primary" onClick={handleShowBookNow}>Book Now</Button>
-                <Button variant="secondary" onClick={handleShowDetails} className="ml-2">Details</Button>
-              </div>
+              <Card.Text>{plan.description}</Card.Text>
+            </Card.Body>
+              <Button variant="primary" onClick={handleShowDetails}>View Details</Button>
+
+              <Button variant="success" onClick={handleShowBookNow}>Book Now</Button>
+          </Col>
+        </Row>
+      </Card>
+
+      <Modal show={showDetails} onHide={handleCloseDetails}>
+        <Modal.Header closeButton>
+          <Modal.Title>Plan Details</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Row>
+            <Col>
+              <img src="/images/des9.jpeg" alt="Plan" style={{ width: '100%' }} />
+            </Col>
+            <Col>
+              <h4>{plan.title}</h4>
+              <p>{plan.description}</p>
+              <p><strong>Price: </strong>{plan.price}</p>
             </Col>
           </Row>
-        </Card.Body>
-      </Card>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseDetails}>Close</Button>
+        </Modal.Footer>
+      </Modal>
 
       <Modal show={showBookNow} onHide={handleCloseBookNow}>
         <Modal.Header closeButton>
           <Modal.Title>Book Now</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Booking form or information goes here.</Modal.Body>
+        <Modal.Body>
+          <p>Booking details form goes here.</p>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseBookNow}>Close</Button>
+          <Button variant="primary">Confirm Booking</Button>
         </Modal.Footer>
       </Modal>
-
-      <Modal show={showDetails} onHide={handleCloseDetails}>
-        <Modal.Header closeButton>
-          <Modal.Title>Details</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>More details about the plan go here.</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseDetails}>Close</Button>
-        </Modal.Footer>
-      </Modal>
-    </>
+    </div>
   );
 }
 
