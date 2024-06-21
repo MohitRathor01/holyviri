@@ -139,14 +139,11 @@ const PlanCard = ({ plan }) => {
             <Row className="mb-3">
               <Form.Group as={Col} controlId="formNoOfAdults">
                 <Form.Label>No of Adults</Form.Label>
-                <Form.Control as="select">
-                  <option>- Select -</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </Form.Control>
+                <Form.Control
+                  type="number"
+                  min="1"
+                  placeholder="Enter number of adults"
+                />
               </Form.Group>
 
               {/* <Form.Group as={Col} controlId="formChildren">
@@ -166,11 +163,9 @@ const PlanCard = ({ plan }) => {
               <Form.Label>Category of Hotels Needed</Form.Label>
               <Form.Control as="select">
                 <option>- Select -</option>
-                <option>1 Star</option>
-                <option>2 Star</option>
-                <option>3 Star</option>
-                <option>4 Star</option>
-                <option>5 Star</option>
+                <option> Budget</option>
+                <option> Deluxe</option>
+                <option> Luxury</option>
               </Form.Control>
             </Form.Group>
 

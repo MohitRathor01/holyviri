@@ -19,7 +19,7 @@
 }
 
 .card-buttons .btn:hover {
-  transform: scale(1.1); /* Slightly enlarge on hover */
+  transform: scale(1.1); 
 }
 
 .itinerary {
