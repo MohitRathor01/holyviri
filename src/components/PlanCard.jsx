@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Card, Button, Modal, Row, Col, Form } from 'react-bootstrap';
-import '../ComponentCss/PLanCard.css';
+import React, { useState } from "react";
+import { Card, Button, Modal, Row, Col, Form } from "react-bootstrap";
+import "../ComponentCss/PLanCard.css";
 
 const PlanCard = ({ plan }) => {
   const [showBookNow, setShowBookNow] = useState(false);
@@ -15,13 +15,28 @@ const PlanCard = ({ plan }) => {
 
   const itinerary = [
     { day: "Day 01", location: "Mathura", description: "Description" },
-    { day: "Day 02", location: "Vrindavan", description: "ADescription" },
+    { day: "Day 02", location: "Vrindavan", description: "Description" },
     { day: "Day 03", location: "Nandgaon", description: "Description" },
     { day: "Day 04", location: "Barsana", description: "Description" },
     { day: "Day 05", location: "Govardhan", description: "Description" },
     { day: "Day 06", location: "Dauji", description: "Description" },
     { day: "Day 07", location: "Gokul", description: "Description" },
+  ];
 
+  const pricing = [
+    { category: "Budget", cost: "Rs.26000" },
+    { category: "Deluxe", cost: "Rs.33500" },
+    { category: "Luxury", cost: "Rs.58500" },
+  ];
+
+  const inclusions = [
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+    
   ];
 
   return (
@@ -36,8 +51,16 @@ const PlanCard = ({ plan }) => {
               <Card.Title>{plan.title}</Card.Title>
               <Card.Text>{plan.description}</Card.Text>
             </Card.Body>
-              <Button variant="primary" onClick={handleShowDetails} className="mr-2">View Details</Button>
-              <Button variant="success" onClick={handleShowBookNow}>Book Now</Button>
+            <Button
+              variant="primary"
+              onClick={handleShowDetails}
+              className="mr-2"
+            >
+              View Details
+            </Button>
+            <Button variant="success" onClick={handleShowBookNow}>
+              Book Now
+            </Button>
           </Col>
         </Row>
       </Card>
@@ -49,12 +72,19 @@ const PlanCard = ({ plan }) => {
         <Modal.Body>
           <Row>
             <Col>
-              <img src="/images/des9.jpeg" alt="Plan" style={{ width: '100%' }} />
+              <img
+                src="/images/des9.jpeg"
+                alt="Plan"
+                style={{ width: "100%" }}
+              />
             </Col>
             <Col>
               <h4>{plan.title}</h4>
               <p>{plan.description}</p>
-              <p><strong>Price: </strong>{plan.price}</p>
+              <p>
+                <strong>Price: </strong> Rs.26000
+                {plan.price}
+              </p>
             </Col>
           </Row>
           <hr />
@@ -76,9 +106,43 @@ const PlanCard = ({ plan }) => {
             ))}
             <div className="itinerary-line"></div>
           </div>
+          <hr />
+          <h5>Pricing</h5>
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Hotel Category</th>
+                <th>Package cost per adult</th>
+              </tr>
+            </thead>
+            <tbody>
+              {pricing.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.category}</td>
+                  <td>{item.cost}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="small">
+            Above cost is based on minimum two adults traveling together,
+            sharing one double room. All transfers and sightseeing by Non AC
+            Wagon R. Any increase/decrease in the strength of the group would
+            change the pricing. Rates valid for Indian Nationals only.
+          </p>
+          <hr />
+          <h4>Inclusions</h4>
+          {/* <h5>Included</h5> */}
+          <ul className="small">
+            {inclusions.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseDetails}>Close</Button>
+          <Button variant="secondary" onClick={handleCloseDetails}>
+            Close
+          </Button>
         </Modal.Footer>
       </Modal>
 
@@ -129,18 +193,6 @@ const PlanCard = ({ plan }) => {
                   placeholder="Enter number of adults"
                 />
               </Form.Group>
-
-              {/* <Form.Group as={Col} controlId="formChildren">
-                <Form.Label>Children</Form.Label>
-                <Form.Control as="select">
-                  <option>Children (5 - 12 Yrs)</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </Form.Control>
-              </Form.Group> */}
             </Row>
 
             <Form.Group className="mb-3" controlId="formCategoryOfHotels">
@@ -155,24 +207,30 @@ const PlanCard = ({ plan }) => {
 
             <Form.Group className="mb-3" controlId="formMessage">
               <Form.Label>Message</Form.Label>
-              <Form.Control as="textarea" rows={3} placeholder="Message(Optional)" />
+              <Form.Control
+                as="textarea"
+                rows={3}
+                placeholder="Message(Optional)"
+              />
             </Form.Group>
 
             <Form.Group controlId="formConsent">
-              <Form.Check 
-                type="checkbox" 
-                label="I authorize Swan Tours & its representatives to Call, SMS & Email me with reference to my Travel Enquiry. This consent will override any registration for DNC / NDNC." 
+              <Form.Check
+                type="checkbox"
+                label="I authorize Holy Vrindavan Tour & its representatives to Call, SMS & Email me with reference to my Travel Enquiry. This consent will override any registration for DNC / NDNC."
               />
             </Form.Group>
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseBookNow}>Close</Button>
+          <Button variant="secondary" onClick={handleCloseBookNow}>
+            Close
+          </Button>
           <Button variant="primary">Confirm Booking</Button>
         </Modal.Footer>
       </Modal>
     </div>
   );
-}
+};
 
 export default PlanCard;

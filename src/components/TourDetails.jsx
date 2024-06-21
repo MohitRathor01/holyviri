@@ -7,7 +7,7 @@ const TourDetails = () => {
   const { id } = useParams();
   const tour = tours.find(t => t.id === parseInt(id));
   return (
-    <div className="container mt-5 text-center bg-light p-5">
+    <div className="container  mb-5 mt-5 text-center bg-light p-5">
       {tour ? (
         <>
           <h2>{tour.title}</h2>
@@ -16,7 +16,7 @@ const TourDetails = () => {
           <div className="row">
             {tour.plans.map((plan, index) => (
               <div className="col-12 col-md-6" key={index}>
-                <PlanCard plan={plan} />
+                <PlanCard  plan={plan} />
               </div>
             ))}
           </div>
