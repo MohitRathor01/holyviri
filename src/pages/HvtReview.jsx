@@ -8,31 +8,32 @@ const HvtReview = () => {
   {
     name: 'John Doe',
     text: 'This is a great service! Highly recommend to everyone.',
-    imgSrc: 'https://via.placeholder.com/150', // Replace with actual image URLs
+    imgSrc:  'images/men.jpg',
     designation: 'CEO, Company A'
   },
   {
     name: 'Jane Smith',
     text:'Amazing experience! Will definitely use again.',
-    imgSrc:'https://via.placeholder.com/150',
+    imgSrc:  'images/men.jpg',
+    
     designation: 'Marketing Head, Company B'
   },
   {
     name: 'Mike Johnson',
     text: 'Very satisfied with the service provided.',
-    imgSrc: 'https://via.placeholder.com/150',
+    imgSrc:  'images/men.jpg',
     designation: 'Product Manager, Company C'
   },
   {
     name: 'Emily Davis',
     text: 'Top-notch customer service and great value.',
-    imgSrc: 'https://via.placeholder.com/150',
+    imgSrc: 'images/men.jpg',
     designation: 'Founder, Company D'
   },
   {
     name: 'William Brown',
     text: 'Exceeded my expectations in every way.',
-    imgSrc: 'https://via.placeholder.com/150',
+    imgSrc:  'images/men.jpg',
     designation: 'CTO, Company E'
   }
 ];

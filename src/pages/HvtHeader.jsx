@@ -1,57 +1,48 @@
 import React from 'react';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
-
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../pagesCss/HvtHeader.css';
 
 export const HvtHeader = () => {
   return (
-    <header className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <a className="navbar-brand d-flex align-items-center" href="#">
+    <Navbar bg="light" expand="lg" className="navbar-light">
+      <Container fluid>
+        <Navbar.Brand href="#" className="d-flex align-items-center">
           <img
-            src="images/logo.png"
-            alt="Holy Vrindavan Tour"
+            src="/images/logo.png"
+            alt="Holy Vrindavan Tour shashank"
             className="rounded-circle"
-            style={{ maxHeight: '65px', marginRight: '10px' }}
+            style={{ maxHeight: '65px', marginRight: '10px',width:"65px" }}
           />
           <h3 className="mb-0 h5">Holy Vrindavan Tour</h3>
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="#">
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarNav" />
+        <Navbar.Collapse id="navbarNav">
+          <Nav className="ms-auto">
+            <Nav.Item>
+              <Nav.Link as={Link} to="/">
                 Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/about">
                 About
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/destinations">
                 Destinations
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/contact">
                 Contact Us
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
