@@ -61,3 +61,18 @@
 .itinerary-content {
   padding-left: 20px; /* Adjusted for proper alignment */
 }
+.btn-orange{
+  border: none;
+  background-color: hsl(29, 98%, 58%)
+
+}
+.btn-black{
+  background-color: black;
+  border: none;
+}
+.btn-black:hover{
+  background-color: hsl(29, 98%, 58%);
+}
+.btn-orange:hover  {
+  background-color: black;
+}

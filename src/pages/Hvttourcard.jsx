@@ -3,15 +3,17 @@ import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../ComponentCss/Hvttourcard.css';
 import tours from "../Data/data.js";
+import ScrollTop from './ScrollTop.jsx';
 
 const Hvttourcard = () => {
   return (
     <section className="bg-light mt-4 p-5">
       <div className="container">
+        <ScrollTop /> {/* Ensure ScrollTop is within the same parent as your tour cards */}
         <div className="row">
-          <div className="col-12 text-center ">
+          <div className="col-12 text-center">
             <h2 className="fw-bold fs-1">
-              Our 
+              Our
               <span className="main-hover"> Destinations </span>
             </h2>
           </div>

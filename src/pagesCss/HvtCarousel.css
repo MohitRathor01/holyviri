@@ -55,3 +55,14 @@
     }
   }
   
+  @media only screen  and (max-width:320px){
+   .new-sec {
+      position: relative;
+      height: 50%;
+      
+      height: calc(75vh - var(--navbar-height)); /* Full height minus navbar */
+    }
+    
+  }
+    
+  

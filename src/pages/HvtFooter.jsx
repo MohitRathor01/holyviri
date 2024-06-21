@@ -1,15 +1,16 @@
 import React from "react";
-import "../pagesCss/HvtFooter.css";
 import { Link } from 'react-router-dom';
+import ScrollTop from './ScrollTop'; 
 
 const HvtFooter = () => {
   return (
     <footer className="bg-dark text-white">
+      <ScrollTop /> 
       <div className="container py-5">
         <div className="row">
           <div className="col-lg-4 col-md-6 mb-4">
             <img
-              src="images/logo.png"
+              src="/images/logo.png"
               alt="Holy Vrindavan Tour"
               className="img-fluid rounded-circle mb-3"
               style={{ maxHeight: "85px" }}

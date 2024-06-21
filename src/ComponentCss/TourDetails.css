@@ -1,0 +1,13 @@
+.btn-orange{
+    background-color: hsl(29, 100%, 50%)
+
+}
+.btn-black{
+    background-color: black;
+}
+.btn-black:hover{
+    background-color: hsl(29, 100%, 50%);
+}
+.btn-orange:hover  {
+    background-color: black;
+}
