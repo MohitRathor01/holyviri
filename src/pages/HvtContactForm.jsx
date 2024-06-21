@@ -1,7 +1,5 @@
-
-
-import React, { useState } from 'react';
-import '../pagesCss/HvtContactForm.css';
+import React, { useState } from "react";
+import "../pagesCss/HvtContactForm.css";
 import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter as FaXTwitter } from "react-icons/fa";
 
@@ -36,9 +34,13 @@ const HvtContactForm = () => {
           </p>
 
           <div className="info">
-            <div className="information">
+            <div className="information">          
               <img src="/assets/location.jpeg" className="icon" alt="" />
-              <p> 📍 Near Anand Krishna Van hotel, Madhuvan Colony, Vrindavan (Mathura) Pin code: 281121</p>
+              <p>
+                {" "}
+                📍 Near Anand Krishna Van hotel, Madhuvan Colony, Vrindavan
+                (Mathura) Pin code: 281121
+              </p>
             </div>
             <div className="information">
               <img src="/assets/email.jpeg" className="icon" alt="" />
@@ -53,18 +55,34 @@ const HvtContactForm = () => {
           <div className="social-media">
             <p> Connect with us :</p>
             <div className="social-icons">
-              <a href="https://x.com/HolyTour42005?t=na70tSgwk3iQGGnXi4uNfA&s=09" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://x.com/HolyTour42005?t=na70tSgwk3iQGGnXi4uNfA&s=09"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaXTwitter />
               </a>
-              <a href="https://www.instagram.com/holyvrindavantour?igsh=MWg5dDNyaThncDFtNQ==" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com/holyvrindavantour?igsh=MWg5dDNyaThncDFtNQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram />
               </a>
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/in/holy-vrindavan-tour-435642310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"
+              >
                 <FaLinkedinIn />
               </a>
-              
+
               <a href="" target="_blank" rel="noopener noreferrer">
-                <img src="images/Zwolf.jpeg" width="28px" className="zwolf" alt="Zwolf" />
+                <img
+                  src="images/Zwolf.jpeg"
+                  width="28px"
+                  className="zwolf"
+                  alt="Zwolf"
+                />
               </a>
             </div>
           </div>
@@ -76,7 +94,7 @@ const HvtContactForm = () => {
 
           <form action="index.html" autoComplete="off">
             <h3 className="title">Contact us</h3>
-            <div className={`input-container ${focus.name ? 'focus' : ''}`}>
+            <div className={`input-container ${focus.name ? "focus" : ""}`}>
               <input
                 type="text"
                 name="name"
@@ -87,7 +105,7 @@ const HvtContactForm = () => {
               <label>Name</label>
               <span>Name</span>
             </div>
-            <div className={`input-container ${focus.email ? 'focus' : ''}`}>
+            <div className={`input-container ${focus.email ? "focus" : ""}`}>
               <input
                 type="email"
                 name="email"
@@ -98,7 +116,7 @@ const HvtContactForm = () => {
               <label>Email</label>
               <span>Email</span>
             </div>
-            <div className={`input-container ${focus.phone ? 'focus' : ''}`}>
+            <div className={`input-container ${focus.phone ? "focus" : ""}`}>
               <input
                 type="tel"
                 name="phone"
@@ -109,23 +127,28 @@ const HvtContactForm = () => {
               <label>Phone</label>
               <span>Phone</span>
             </div>
-            <div className={`input-container textarea ${focus.message ? 'focus' : ''}`}>
+            <div
+              className={`input-container textarea ${
+                focus.message ? "focus" : ""
+              }`}
+            >
               <textarea
                 name="message"
                 className="input"
                 placeholder="Message (Optional)"
-                
                 // onFocus={handleFocus}
                 onBlur={handleBlur}
               ></textarea>
               <span>Message</span>
             </div>
-            <button type="button " className="btn btn-send">Send</button>
+            <button type="button " className="btn btn-send">
+              Send
+            </button>
           </form>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default HvtContactForm;
