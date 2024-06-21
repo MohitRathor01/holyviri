@@ -1,5 +1,6 @@
 import React from "react";
 import "../pagesCss/HvtFooter.css";
+import { Link } from 'react-router-dom';
 
 const HvtFooter = () => {
   return (
@@ -9,7 +10,7 @@ const HvtFooter = () => {
           <div className="col-lg-4 col-md-6 mb-4">
             <img
               src="images/logo.png"
-              alt=""
+              alt="Holy Vrindavan Tour"
               className="img-fluid rounded-circle mb-3"
               style={{ maxHeight: "85px" }}
             />
@@ -42,36 +43,24 @@ const HvtFooter = () => {
           </div>
           <div className="col-lg-4 col-md-12 mb-4">
             <h1 className="h5">Quick Links</h1>
-            <a
-              href="#"
-              className="text-white d-block mb-2 text-decoration-none"
-            >
+            <Link to="/terms-conditions" className="text-white d-block mb-2 text-decoration-none">
               Terms & Conditions
-            </a>
-            <a
-              href="#"
-              className="text-white d-block mb-2 text-decoration-none"
-            >
+            </Link>
+            <Link to="/privacy-policy" className="text-white d-block mb-2 text-decoration-none">
               Privacy Policy
-            </a>
-            <a
-              href="#"
-              className="text-white d-block mb-2 text-decoration-none"
-            >
+            </Link>
+            <Link to="/refund-policy" className="text-white d-block mb-2 text-decoration-none">
               Refund Policy
-            </a>
-            <a
-              href="#"
-              className="text-white d-block mb-2 text-decoration-none"
-            >
+            </Link>
+            <Link to="/reservation-policy" className="text-white d-block mb-2 text-decoration-none">
               Reservation Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>
       <div className="bg-black text-secondary text-center py-3">
         <p className="mb-0">
-          &copy; 2023 Holy Vrindavan Tour. All rights reserved
+          &copy; 2023 Holy Vrindavan Tour. All rights reserved.
         </p>
       </div>
     </footer>

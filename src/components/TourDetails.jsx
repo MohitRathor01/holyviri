@@ -7,7 +7,7 @@ const TourDetails = () => {
   const { id } = useParams();
   const tour = tours.find(t => t.id === parseInt(id));
   return (
-    <div className="container mt-5 text-center">
+    <div className="container mt-5 text-center bg-light p-5">
       {tour ? (
         <>
           <h2>{tour.title}</h2>
