@@ -7,8 +7,7 @@
     overflow: hidden; /* Hide overflow to prevent scrolling */
     height: calc(75vh - var(--navbar-height)); /* Full height minus navbar */
   }
-  
-  .slide {
+    .slide {
     position: relative;
     margin: 0;
     padding: 0;
@@ -16,8 +15,7 @@
     display: flex;
     flex-wrap: nowrap;
     height: 100%; /* Full height for the slide */
-  }
-  
+  }  
   .slide .item {
     position: absolute; /* Position items absolutely for overlay */
     width: 100%; /* Full width for each item */
@@ -53,8 +51,7 @@
       transform: scale(1.2);
       opacity: 3;
     }
-  }
-  
+  }  
   @media only screen  and (max-width:320px){
    .new-sec {
       position: relative;
@@ -62,7 +59,6 @@
       
       height: calc(75vh - var(--navbar-height)); /* Full height minus navbar */
     }
-    
-  }
+      }
     
   

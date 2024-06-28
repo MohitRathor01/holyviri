@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../pagesCss/HvtHeader.css';
 
 export const HvtHeader = () => {
