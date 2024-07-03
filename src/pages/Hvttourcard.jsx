@@ -1,27 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../ComponentCss/Hvttourcard.css';
-import tours from "../Data/data.js";
 import ScrollTop from './ScrollTop.jsx';
+import axios from'axios'
 
 const Hvttourcard = () => {
 
-  const axios = require('axios');
-
-  // Example API endpoint
-  const apiUrl = 'https://api.example.com/data';
+  const [tours, setTour] =useState([]);
   
-  // Make a GET request to the API
+  
+  // Example API endpoint
+  const apiUrl = 'http://localhost:8080/destination';  
   axios.get(apiUrl)
-    .then(response => {
-      // Handle successful response
-      console.log('Data:', response.data);
-    })
-    .catch(error => {
-      // Handle error
-      console.error('Error fetching data:', error);
-    });
+  .then(response => {    
+    console.log(setTour( response.data));
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+  console.log(tours ,"fuck fuck fuck")
   
 
 
