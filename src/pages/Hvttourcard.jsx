@@ -6,6 +6,25 @@ import tours from "../Data/data.js";
 import ScrollTop from './ScrollTop.jsx';
 
 const Hvttourcard = () => {
+
+  const axios = require('axios');
+
+  // Example API endpoint
+  const apiUrl = 'https://api.example.com/data';
+  
+  // Make a GET request to the API
+  axios.get(apiUrl)
+    .then(response => {
+      // Handle successful response
+      console.log('Data:', response.data);
+    })
+    .catch(error => {
+      // Handle error
+      console.error('Error fetching data:', error);
+    });
+  
+
+
   return (
     <section className="bg-light mt-4 p-5">
       <div className="container">
