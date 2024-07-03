@@ -8,12 +8,12 @@ export const HvtHeader = () => {
   return (
     <Navbar bg="light" expand="lg" className="navbar-light">
       <Container fluid>
-        <Navbar.Brand href="#" className="d-flex align-items-center">
+        <Navbar.Brand href="/" className="d-flex align-items-center">
           <img
             src="/images/logo.png"
             alt="Holy Vrindavan Tour shashank"
             className="rounded-circle"
-            style={{ maxHeight: '65px', marginRight: '10px',width:"65px" }}
+            style={{ maxHeight: '60px', marginRight: '10px',width:"60px" }}
           />
           <h3 className="mb-0 h5">Holy Vrindavan Tour</h3>
         </Navbar.Brand>

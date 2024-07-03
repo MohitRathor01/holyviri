@@ -9,7 +9,7 @@ const Hvttourcard = () => {
     <section className="bg-light mt-4 p-5">
       <div className="container">
         <div className="row">
-          <div className="col-12 text-center ">
+          <div className="col-12 text-center pb-3 ">
             <h2 className="fw-bold fs-1">
               Our 
               <span className="main-hover"> Destinations </span>

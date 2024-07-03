@@ -35,8 +35,7 @@ const PlanCard = ({ plan }) => {
     "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
     "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
     "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-    "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
-    
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
   ];
 
   return (
@@ -88,7 +87,10 @@ const PlanCard = ({ plan }) => {
             </Col>
           </Row>
           <hr />
-          <h5>Recommended Itinerary</h5>
+          <h5 className="fw-bold mb-3">
+            Recommended
+            <span className="text main-hover"> Itinerary </span>
+          </h5>
           <div className="itinerary">
             {itinerary.map((item, index) => (
               <div key={index} className="itinerary-item mb-4">
@@ -107,7 +109,7 @@ const PlanCard = ({ plan }) => {
             <div className="itinerary-line"></div>
           </div>
           <hr />
-          <h5>Pricing</h5>
+          <h5>Pricing: </h5>
           <table className="table">
             <thead>
               <tr>
@@ -131,7 +133,7 @@ const PlanCard = ({ plan }) => {
             change the pricing. Rates valid for Indian Nationals only.
           </p>
           <hr />
-          <h4>Inclusions</h4>
+          <h5>Inclusions:</h5>
           {/* <h5>Included</h5> */}
           <ul className="small">
             {inclusions.map((item, index) => (

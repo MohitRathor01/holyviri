@@ -14,6 +14,10 @@ import HvtFloatingbtn from './components/HvtFloatingbtn';
 import HvtTnC from './pages/HvtTnC';
 import HvtPrivacyP from './pages/HvtPrivacyP';
 import HvtRnC from './pages/HvtRnC';
+import HvtReservationP from '../src/pages/HvtReservationP'
+import ScrollToTop from './pages/ScrollToTop';
+import Gallery from './pages/Gallery';
+import AboutFounder from './pages/AboutFounder';
 
 
 
@@ -24,12 +28,15 @@ function App() {
   return (
     <Router>
       <HvtHeader />
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={
           <>
             <HvtCarousel />
             <HvtWwr />
             <Hvttourcard />
+            <Gallery/>
+            <AboutFounder/>
             <HvtReview />
             <HvtContactForm />
           </>
@@ -41,7 +48,7 @@ function App() {
         <Route path="/terms-conditions" element={<HvtTnC />} />
         <Route path="/privacy-policy" element={<HvtPrivacyP />} />
         <Route path="/refund-policy" element={<HvtRnC />} />
-        <Route path="/reservation-policy" element={<HvtTnC />} />
+        <Route path="/reservation-policy" element={<HvtReservationP/> } />
       </Routes>
       <HvtFloatingbtn />
       <HvtFooter />

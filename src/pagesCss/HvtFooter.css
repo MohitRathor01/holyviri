@@ -9,9 +9,15 @@ footer {
   .text-secondary {
     color: #C7C7C7 !important;
   }
+  .new-p{
+    font-size: .9rem;
+  }
   
   .bg-black {
     background-color: #101010 !important;
+  }
+  .logo-head{
+    font-size: 20px;
   }
   
   /* Adjust margin between sections */

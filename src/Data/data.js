@@ -3,7 +3,7 @@
         id: 1, 
         imgSrc: 'images/des7.jpeg', 
         title: 'Mathura', 
-        details: 'Details about MathuraMathura is a city in the North Indian state of Uttar Pradesh.Mathura is the birthplace of Lord Krishna at the centre of Braj or Brij-bhoomi, called Shri Krishna Janma-Bhoomi, literally: ‘Lord Krishna’s birthplace’.The best time to visit Mathura is October, November, December, January, February and March. Since this is the peak season expect a little crowd during this time. July, August and September period experiences moderate weather. So, you can easily avoid facing a large gathering',
+        details: 'Mathura is a city in the North Indian state of Uttar Pradesh.Mathura is the birthplace of Lord Krishna at the centre of Braj or Brij-bhoomi, called Shri Krishna Janma-Bhoomi, literally: ‘Lord Krishna’s birthplace’.The best time to visit Mathura is October, November, December, January, February and March. Since this is the peak season expect a little crowd during this time. July, August and September period experiences moderate weather. So, you can easily avoid facing a large gathering',
         plans: [
           { images:"images/des7.jpeg", title: 'One Day Plan', details: 'Details of one day plan for Vrindavan' },
           { title: 'One two Plan', images:"images/des7.jpeg", details: 'Details of one day plan for Vrindavan' },

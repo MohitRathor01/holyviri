@@ -14,7 +14,7 @@ const HvtWwr = () => {
                 </div>
                 <div className="row">
                     <div className="col-12 col-md-8 offset-md-2">
-                        <p className="text-center">
+                        <p className=" text-justify">
                             Welcome to the official website of Holy Vrindavan Tour,
                             We are the number one Travel Agent in Braj, providing our clients with the best from hotel bookings to transportation. Our Braj tour packages are designed to make sure you won’t want to miss out on any of these amazing destinations! We cover Vrindavan, Mathura, Nandgaon, Barsana, Govardhan, Gokul, and Dauji.
                             Our team is very passionate and has a deep knowledge of travel. Our team has a deep understanding of how to handle clients.
